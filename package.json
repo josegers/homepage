@@ -23,9 +23,6 @@
     "webpack-server": "^0.1.2"
   },
   "dependencies": {
-    "react": "^16.4.2",
-    "react-bootstrap": "^0.32.3",
-    "react-dom": "^16.4.2",
-    "react-hot-loader": "^4.3.5"
+    "react-bootstrap": "^0.32.3"
   }
 }
