@@ -13,13 +13,13 @@ export default class PageStructure extends React.Component {
       <App>
         <Split>
           <Box>
-            <Navigation />
+            <Navigation activeMenuKey={this.props.activeMenuKey}/>
           </Box>
           <Box>
-            <Header>
+            <Header className="customHeader">
               <Title>Jo Segers</Title>
             </Header>
-            {this.props.children}
+              {this.props.children}
             <Footer>2018 Jo Segers</Footer>
           </Box>
         </Split>
