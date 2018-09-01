@@ -15,8 +15,31 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
-      }
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader', options: {
+              includePaths: ['./node_modules']
+            }
+          }
+        ]
+      },
     ]
   },
   resolve: { extensions: ['*', '.js', '.jsx'] },
@@ -29,7 +52,8 @@ module.exports = {
     contentBase: path.join(__dirname, "public/"),
     port: 3000,
     publicPath: "http://localhost:3000/dist/",
-    hotOnly: true
+    hotOnly: true,
+    historyApiFallback: true,
   },
   plugins: [ new webpack.HotModuleReplacementPlugin() ]
 };

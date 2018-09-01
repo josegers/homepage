@@ -1,7 +1,9 @@
+import 'grommet/scss/vanilla/index.scss';
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App.jsx";
+import Main from "./Main";
+
 ReactDOM.render(
-  <App />,
+  <Main />,
   document.getElementById("root")
 );
